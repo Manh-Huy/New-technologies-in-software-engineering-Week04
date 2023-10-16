@@ -5,6 +5,23 @@
 /.pnp
 .pnp.js
 
+# some folders
+src/Component
+src/context
+src/CustomTheme
+src/pages
+src/App.js
+src/AppPractice.js
+src/App.Blog.js
+src/MMM.js
+src/App.Blog.js
+db.json
+test.http
+
+
+
+
+
 # testing
 /coverage
 

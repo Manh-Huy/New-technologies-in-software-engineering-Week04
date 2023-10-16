@@ -1,30 +1,19 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const app = express();
-const morgan = require('morgan');
-const dotenv = require('dotenv');
-dotenv.config();
-const cookieParser = require('cookie-parser');
-const route = require('./Routes');
-const DBconnection = require('./Utils/DBConnection');
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
+import { ThemeProvider } from '@mui/material';
+import BlogApp from './BlogApp';
+// AppPractice
 
-// For some plugin
-app.use(
-    express.urlencoded({
-        extended: true,
-    })
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <BlogApp />
+  </React.StrictMode>
 );
-app.use(express.json());
-app.use(cookieParser());
 
-// HTTP logger
-app.use(morgan('combined'));
-// Routers
-route(app);
-
-// Thông báo đã bật server lên
-app.listen(5000, () => {
-    // db connection
-    DBconnection(mongoose);
-    console.log('connect to the backend');
-});
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
