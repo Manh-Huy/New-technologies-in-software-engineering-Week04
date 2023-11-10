@@ -1,0 +1,1 @@
+cd into server, cd into src and run the command npx mocha testfile.js to see the results
